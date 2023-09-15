@@ -21,7 +21,6 @@ const Main = () => {
     };
 
 
-
     const preprocessImage = (image) => {
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d');
@@ -51,9 +50,7 @@ const Main = () => {
 
         return canvas.toDataURL();
     };
-
     const filterText = (text) => {
-
         const regexToRemove = [
             /[•●▶]/gm,
             /\n\[ \.\\ \.\. \.\\ \| 4/gm,
@@ -77,9 +74,7 @@ const Main = () => {
             /\ngy /gm,
             /\n‘ j ] /gm,
         ];
-
         const combinedRegex = new RegExp(regexToRemove.map(regex => regex.source).join('|'), 'gm');
-
         return text.replace(combinedRegex, ' ')
             .replace(/(?<=\n)e(?= [A-Z])/gm, '-')
             .replace(/(?<!\n)\n(?=[A-Z]+\.)/gm, '<br /><br />')
@@ -106,19 +101,15 @@ const Main = () => {
         }
     };
 
-
     const onDrop = async (acceptedFiles) => {
         const file = acceptedFiles[0];
         const imageUrl = URL.createObjectURL(file);
         setImageSrc(imageUrl);
-
         const image = new Image();
         image.src = imageUrl;
-
         image.onload = () => {
             const preprocessedImageUrl = preprocessImage(image);
             // console.log("preprocessedImageUrl ===>", preprocessedImageUrl)
-
             Tesseract.recognize(preprocessedImageUrl)
                 .then(({data: {text}}) => {
                     // console.log("text ===> ", text)
@@ -128,8 +119,8 @@ const Main = () => {
                 });
         };
     };
-
     const {getRootProps, getInputProps} = useDropzone({onDrop});
+
 
     useEffect(() => {
         setTextContent(extractedText);
@@ -147,7 +138,7 @@ const Main = () => {
                         "&:hover": {bgcolor: "darkgreen", transform: "scale(0.95)"}
                     }}
                 >
-                    Cliquez pour sélectionner une image
+                    Cliquez pour sélectionner une image (png | jpg | jpeg)
                 </Button>
             </Box>
             {imageSrc && (
