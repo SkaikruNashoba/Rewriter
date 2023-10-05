@@ -1,23 +1,24 @@
-//récupère toutes les couleurs sans un tiret
-/\n\t--[a-z]+:/gm,
-
 //récupère toutes les couleurs sans tiret et avec un #
-/\n\t--[a-z]+: #[a-zA-Z0-9]+;/gm,
+/--([a-zA-Z0-9]+): (#[a-zA-Z0-9]+);/gm,
 
-//récupère toutes les couleurs sans tiret et avec rgba
-/\n\t--[a-z]+: rgba\([0-9], [0-9], [0-9], [0-9].[0-9]\);/gm,
+//récupère toutes les couleurs sans tiret et avec rgba avec opacité à virgule
+/--([a-zA-Z0-9]+): (rgba\([0-9], [0-9], [0-9], [0-9].[0-9]\));/gm,
+
+//récupère toutes les couleurs sans tiret et avec rgba avec opacité sans virgule
+/--([a-zA-Z0-9]+): (rgba\([0-9], [0-9], [0-9], [0-9]\));/gm,
 
 //récupère toutes les couleurs sans tiret et avec rgb
-/\n\t--[a-z]+: rgb\([0-9], [0-9], [0-9]\);/gm,
+/--([a-zA-Z0-9]+): (rgb\([0-9], [0-9], [0-9]\));/gm,
 
-//récupère toutes les couleurs avec un tiret
-/\n\t--[a-z]+-[a-z]+:/gm,
 
 //récupère toutes les couleurs avec tiret et avec un #
-/\n\t--[a-z]+-[a-z]+: #[a-zA-Z0-9]+;/gm,
+/--([a-zA-Z0-9]+-[a-zA-Z0-9]+): (#[a-zA-Z0-9]+);/gm,
 
 //récupère toutes les couleurs avec un tiret et avec rgba
-/\n\t--[a-z]+-[a-z]+: rgba\([0-9], [0-9], [0-9], [0-9].[0-9]\);/gm,
+/--([a-zA-Z0-9]+-[a-zA-Z0-9]+): (rgba\([0-9], [0-9], [0-9], [0-9].[0-9]\));/gm,
+
+//récupère toutes les couleurs avec tiret et avec rgba avec opacité sans virgule
+/--([a-zA-Z0-9]+-[a-zA-Z0-9]+): (rgba\([0-9], [0-9], [0-9], [0-9]\));/gm,
 
 //récupère toutes les couleurs avec un tiret et avec rgb
-/\n\t--[a-z]+-[a-z]+: rgb\([0-9], [0-9], [0-9]\);/gm
+/--([a-zA-Z0-9]+-[a-zA-Z0-9]+): (rgb\([0-9], [0-9], [0-9]\));/gm
