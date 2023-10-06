@@ -9,7 +9,7 @@ import {
     TextField,
     Typography
 } from "@mui/material";
-import {fetchData} from "../../../Utils/utils";
+import {fetchDataNoLocal} from "../../../Utils/utils";
 import {useEffect, useState} from "react";
 import Icon from "../../../Assets/icon.png";
 import {Link, useNavigate} from "react-router-dom";
@@ -89,7 +89,7 @@ const AdresseAdd = () => {
             Pays: pays,
         })
 
-        const request = await fetchData("POST", `Adresse/add/${itemParsed.idAdresse}`, body)
+        const request = await fetchDataNoLocal("POST", `Adresse/add/${itemParsed.idAdresse}`, body)
         const data = request.data
         if (data.success) {
             setVerif(true)

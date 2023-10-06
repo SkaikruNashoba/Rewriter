@@ -16,7 +16,7 @@ import {
     Select,
     MenuItem,
 } from "@mui/material";
-import {fetchData} from "../../Utils/utils";
+import {fetchData, fetchDataNoLocal} from "../../Utils/utils";
 import CustomSnackBar from "../../Scripts/CustomSnackBar";
 
 const Register = () => {
@@ -102,7 +102,7 @@ const Register = () => {
             Postal: postal
         });
 
-        const request = await fetchData("POST", "Function/register", body);
+        const request = await fetchDataNoLocal("POST", "Function/register", body);
         const data = request.data;
         if (data.success) {
             setVerif(true)

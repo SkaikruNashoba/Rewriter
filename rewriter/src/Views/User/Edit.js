@@ -9,7 +9,7 @@ import {
     Button,
     TextField,
 } from "@mui/material";
-import {fetchData} from "../../Utils/utils";
+import {fetchData, fetchDataNoLocal} from "../../Utils/utils";
 import CustomSnackBar from "../../Scripts/CustomSnackBar";
 
 const Edit = () => {
@@ -53,7 +53,7 @@ const Edit = () => {
                 Password: password,
                 ConfirmPassword: confirmPassword,
             });
-            const request = await fetchData(
+            const request = await fetchDataNoLocal(
                 "PUT",
                 `User/edit/${userParsed.id}`,
                 body

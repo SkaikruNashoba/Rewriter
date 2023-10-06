@@ -14,8 +14,6 @@ const {MongoClient} = require("mongodb");
 const app = express();
 app.use(cors());
 app.use(express.json());
-// const swaggerJsdoc = require("swagger-jsdoc");
-// const swaggerUi = require("swagger-ui-express");
 const routerUser = require("./routers/routerUser");
 const routerAdmin = require("./routers/routerAdmin");
 const routerFunction = require("./routers/routerFunction");
@@ -98,36 +96,6 @@ app.listen(process.env.PORT, () => {
     console.log(`App started on port: ${process.env.PORT}`);
     console.log(`App staging mode: ${process.env.STAGING}`);
 });
-
-// const options = {
-//     definition: {
-//         openapi: "3.0.1",
-//         info: {
-//             title: "Tech. commerce",
-//             version: "1.0.0",
-//             description: "API pour le projet e-commerce de la Web@cademie.",
-//             license: {
-//                 name: "MIT",
-//                 url: "https://spdx.org/licenses/MIT.html",
-//             },
-//             contact: {
-//                 name: "Valentin Leleu",
-//                 email: "valentin.leleu@epitech.eu",
-//             },
-//         },
-//         servers: [
-//             {
-//                 url: "http://localhost:8080/",
-//             },
-//             {
-//                 url: "https://3jlm5a7dy7.execute-api.eu-west-3.amazonaws.com/dev/",
-//             },
-//         ],
-//     },
-//     apis: ["./routers/**/*.js"],
-//     swagger: 2.0,
-// };
-// app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerJsdoc(options)));
 
 app.get("/", (req, res) => {
     res.send({});

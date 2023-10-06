@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {Box, Button, Card, Container, TextField} from "@mui/material";
-import {fetchData} from "../../../Utils/utils";
+import {fetchDataNoLocal} from "../../../Utils/utils";
 import CustomSnackBar from "../../../Scripts/CustomSnackBar";
 
 const AdresseWithId = () => {
@@ -43,7 +43,7 @@ const AdresseWithId = () => {
         }, [])
 
         const handleGetAdresseWithId = async () => {
-            const request = await fetchData("GET", `Adresse/unique/${id.id}`);
+            const request = await fetchDataNoLocal("GET", `Adresse/unique/${id.id}`);
             const data = request.data;
             if (data.success) {
                 const adresseData = data.adresse;
@@ -65,7 +65,7 @@ const AdresseWithId = () => {
                 idAdresse: idAdresse,
             });
 
-            const request = await fetchData("PUT", `Adresse/edit/${id.id}`, body);
+            const request = await fetchDataNoLocal("PUT", `Adresse/edit/${id.id}`, body);
             const data = request.data;
             if (data.success) {
                 const updatedDataUser = {

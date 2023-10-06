@@ -1,7 +1,7 @@
 import {Alert, Box, Button, Card, Container, Divider, Grid, Typography} from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import React, {useContext, useEffect, useState} from "react";
-import {fetchData} from "../../../Utils/utils";
+import {fetchDataNoLocal} from "../../../Utils/utils";
 import {GlobalContext} from "../../../Hooks/GlobalContext";
 import {useNavigate} from "react-router-dom";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -30,7 +30,7 @@ const DetailProfil = () => {
     const [value, setValue] = React.useState("1");
 
     const getAdresse = async () => {
-        const request = await fetchData("GET", `Adresse/${adresseParsed.idAdresse}`)
+        const request = await fetchDataNoLocal("GET", `Adresse/${adresseParsed.idAdresse}`)
         const data = request.data
         if (data.success) {
             const adresseData = data.adresses.adresse;
@@ -70,7 +70,7 @@ const DetailProfil = () => {
 
     const handleDeleteUser = async () => {
         const idSession = JSON.parse(item);
-        const request = await fetchData("PUT", `User/suspend/${idSession["id"]}`)
+        const request = await fetchDataNoLocal("PUT", `User/suspend/${idSession["id"]}`)
         const data = request.data
         if (data.success) {
             setVerif(true)
@@ -89,7 +89,7 @@ const DetailProfil = () => {
     };
 
     const handleDeleteAdresse = async (id) => {
-        const request = await fetchData("DELETE", `Adresse/${id}`)
+        const request = await fetchDataNoLocal("DELETE", `Adresse/${id}`)
         const data = request.data
         if (data.success) {
             setTimeout(() => {

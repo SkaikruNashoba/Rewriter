@@ -13,7 +13,7 @@ import {
     TextField,
     Avatar,
 } from "@mui/material";
-import {fetchData} from "../../Utils/utils";
+import {fetchData, fetchDataNoLocal} from "../../Utils/utils";
 import {GlobalContext} from "../../Hooks/GlobalContext";
 import CustomSnackBar from "../../Scripts/CustomSnackBar";
 
@@ -75,7 +75,7 @@ const Login = () => {
             Email: email,
             Password: pwd,
         });
-        const request = await fetchData("PUT", "Function/login", body);
+        const request = await fetchDataNoLocal("PUT", "Function/login", body);
         const data = request.data
         // console.log(data)
         if (data.success) {
