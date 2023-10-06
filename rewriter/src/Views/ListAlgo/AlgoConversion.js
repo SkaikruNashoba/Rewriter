@@ -133,6 +133,7 @@ const AlgoConversion = () => {
                             </Button>
                         </Box>
                         <TextField
+                            aria-readonly={true}
                             multiline
                             fullWidth
                             variant="outlined"
@@ -149,6 +150,7 @@ const AlgoConversion = () => {
                             </Button>
                         </Box>
                         <TextField
+                            aria-readonly={true}
                             multiline
                             fullWidth
                             value={jsonCode}
