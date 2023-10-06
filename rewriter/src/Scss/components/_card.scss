@@ -1,0 +1,191 @@
+.card {
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #DDD;
+    border-radius: ($base-border-radius / 4);
+    box-shadow: $base-box-shadow;
+    margin: 25px;
+    // max-width: 400px;
+    background-color: #FFF;
+    width: 60%;
+
+    .card-title {
+        font-size: $md-font-size;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: $base-font-size;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.card-auto {
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #DDD;
+    border-radius: ($base-border-radius / 4);
+    box-shadow: $base-box-shadow;
+    margin: 25px;
+    background-color: #FFF;
+    width: auto;
+
+    .card-title {
+        font-size: $md-font-size;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: $base-font-size;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.card-mac {
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #DDD;
+    border-radius: ($base-border-radius / 4);
+    box-shadow: $base-box-shadow;
+    margin: 5px;
+    background-color: #FFF;
+    width: max-content;
+
+    .card-title {
+        font-size: $md-font-size;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: $base-font-size;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.card-auto-edit {
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #DDD;
+    border-radius: ($base-border-radius / 4);
+    box-shadow: $base-box-shadow;
+    margin: 5px;
+    background-color: #FFF;
+    width: auto;
+
+    .card-title {
+        font-size: $md-font-size;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: $base-font-size;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.card-rectangle-edit {
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #DDD;
+    border-radius: ($base-border-radius / 4);
+    box-shadow: $base-box-shadow;
+    margin: 5px;
+    background-color: #FFF;
+    width: 80%;
+
+    .card-title {
+        font-size: $md-font-size;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: $base-font-size;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.bigCard {
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #DDD;
+    border-radius: ($base-border-radius / 4);
+    box-shadow: $base-box-shadow;
+    margin: 25px;
+    // max-width: 400px;
+    background-color: #FFF;
+    width: 100%;
+
+    .card-title {
+        font-size: $md-font-size;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: $base-font-size;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.cardRectangle {
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #DDD;
+    border-radius: ($base-border-radius / 4);
+    box-shadow: $base-box-shadow;
+    margin: 25px;
+    // max-width: 400px;
+    background-color: #FFF;
+    width: 80%;
+
+    .card-title {
+        font-size: $md-font-size;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: $base-font-size;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+/*Card basique Logan */
+.cardArtSide {
+    display: flex;
+    flex-direction: column;
+    padding: $base-padding;
+    border: $base-border-thickness solid #DDD;
+    border-radius: ($base-border-radius / 4);
+    box-shadow: $base-box-shadow;
+    margin: 25px;
+    background-color: #86f1e9;
+    width: 25%;
+}

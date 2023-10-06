@@ -1,0 +1,371 @@
+.bg-dotted {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #90afe7;
+  background-image: radial-gradient(#565656 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -10px -10px;
+  z-index: -1;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  text-align: left;
+  margin-right: 0 auto;
+}
+
+.cursor-text {
+  cursor: text
+}
+
+.cursor-pointer {
+  cursor: pointer
+}
+
+/* input[type="date"],
+input[type="email"],
+input[type="text"],
+input[type="password"],
+input[type="checkbox"] {
+  transition: all ease-in-out .465s;
+}
+
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="checkbox"]:focus {
+  transition: all ease-in-out .465s;
+  transform: scale(1.105);
+  box-shadow: 6px 5px 19px -2px rgba(0, 0, 0, 0.9);
+}
+
+input[type="email"]:hover,
+input[type="date"]:hover,
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="checkbox"]:hover {
+  transition: all ease-in-out .465s;
+  transform: scale(1.105);
+  box-shadow: 6px 5px 19px -2px rgba(0, 0, 0, 0.9);
+}
+
+input[type="email"],
+input[type="date"],
+input[type="text"],
+input[type="password"],
+input[type="checkbox"] {
+  transition: all ease-in-out .465s;
+}
+
+input[type="email"],
+input[type="date"],
+input[type="text"],
+input[type="password"],
+input[type="checkbox"] {
+  transition: all ease-in-out .465s;
+}
+
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="checkbox"]:focus {
+  transition: all ease-in-out .465s;
+  transform: scale(1.105);
+  box-shadow: 6px 5px 19px -2px rgba(0, 0, 0, 0.9);
+}
+
+input[type="email"]:hover,
+input[type="date"]:hover,
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="checkbox"]:hover {
+  transition: all ease-in-out .465s;
+  transform: scale(1.105);
+  box-shadow: 6px 5px 19px -2px rgba(0, 0, 0, 0.9);
+} */
+
+.password-title {
+  border: 1px solid #242424;
+  width: 100%;
+}
+
+.card {
+  margin: 20px auto;
+}
+
+dialog::backdrop {
+  background-color: #252525ab;
+}
+
+dialog {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 6px;
+  border-width: 3px;
+}
+
+dialog .btn-success {
+  position: relative;
+  left: 100%;
+  translate: -100%;
+}
+
+.po-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.po-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.span-sidenav {
+  color: black;
+  width: max-content;
+  cursor: pointer;
+  display: flex;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 5px;
+  border-radius: 5px 0px 0px 5px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a,
+.sidenav button {
+  /*padding: 8px 8px 8px 32px;*/
+  text-decoration: none;
+  font-size: 25px;
+  color: #c7c5c5;
+  display: block;
+  transition: 0.3s;
+  text-align: left;
+  background: unset;
+  background-color: unset;
+  border: unset;
+  border-radius: unset;
+}
+
+.sidenav h1 {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #c7c5c5;
+  display: block;
+  transition: 0.3s;
+  text-align: center;
+  background: unset;
+  background-color: unset;
+  border: unset;
+  border-radius: unset;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  text-align: left;
+  background: unset;
+  transform: scale(0.9);
+  background-color: unset;
+  border: unset;
+  border-radius: unset;
+}
+
+.sidenav button:hover {
+  color: #ff0505;
+  background: unset;
+  background-color: unset;
+  border: unset;
+  border-radius: unset;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+.wb-bw {
+  word-break: break-word;
+}
+
+/*Logan add class */
+/*headerclass*/
+.btn-shop {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.head-icn {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  width: 50px;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+}
+
+.profileExt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 40%;
+}
+
+.profileIn {
+  justify-content: center;
+  width: 100%;
+}
+
+.profileIn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10%;
+}
+
+.homeInc:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10%;
+}
+
+.head-top {
+  flex-direction: row;
+  justify-content: space-around;
+  display: flex;
+  width: 80%;
+}
+
+/*LoginClass*/
+/* .input-login{
+    display: flex;
+    flex-direction: column;
+    
+  } */
+.imgsite {
+  width: 15rem;
+}
+
+.container-fluid {
+  width: 100%;
+  margin-top: 1%;
+}
+
+/*Main Art */
+.asideContainer {
+  background-color: #9195E9;
+  width: 25%;
+}
+
+.artMain {
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.MainArtTitle {
+  font-size: large;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.art-link-view {
+  border: solid 1px;
+  padding: 1%;
+  width: 98%;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.art-link-view:hover {
+  box-shadow: 4px 6px 6px #D09EB7;
+  transform: scale(1.01);
+}
+
+.bg-linear {
+  background: linear-gradient(120deg, rgba(255, 255, 255, 1) 85%, rgb(187, 255, 0) 10%);
+}
+
+.bg-linear-star {
+  background: url("../Assets/star(1).png") #fff right no-repeat;
+}
+
+.spanArt {
+  flex-direction: column;
+
+}
+
+.spanArtDesc {
+  font-style: italic;
+  color: #565656;
+}
+
+.ArtNameDesc {
+  display: flex;
+  flex-direction: column;
+}
+
+.ArtNameDesc h3 {
+  margin-bottom: 1%;
+}
+
+.PriceStock h4 {
+  margin-bottom: 5%;
+}
+
+.btnCategorie {
+  transition: 0.3s;
+}
+
+.btnCategorie:hover {
+  transition: 0.3s;
+  background-color: #767abe;
+  color: floralwhite;
+}
+
+.profileconnect {
+  transition: 0.2s;
+}
+
+.profileconnect:hover {
+  transition: 0.2s;
+  scale: 1.01;
+  cursor: pointer;
+}

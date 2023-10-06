@@ -1,4 +1,4 @@
-import { Box, Container, Grid, TextField, Typography, Button } from "@mui/material";
+import { Box, Grid, TextField, Typography, Button } from "@mui/material";
 import React, { useState } from "react";
 import CustomSnackBar from "../../Scripts/CustomSnackBar";
 
@@ -70,7 +70,7 @@ const AlgoConversion = () => {
         let tailwindCode = "colors : {\n";
         for (const [key, value] of Object.entries(colors)) {
             if (value !== "var(--undefined)") {
-            tailwindCode += `\t${key}: "${value}",\n`;
+            tailwindCode += `\t'${key}': "${value}",\n`;
             }
         }
         tailwindCode += "},\n";
@@ -84,7 +84,7 @@ const AlgoConversion = () => {
                 jsonCode += "{\n\t\t\t\"name\": \"" + key + "\",\n\t\t\t\"slug\": \"" + key + "\",\n\t\t\t\"color\": \"" + colorsValue[key].propertyValue + "\"\n\t\t},\n\t\t";
             }
         }
-        jsonCode +=  "],\n" + "\t\"text\": true\n" + "},\n";
+        jsonCode +=  '],\n\t"text": true\n},\n';
         return jsonCode;
     };
 
