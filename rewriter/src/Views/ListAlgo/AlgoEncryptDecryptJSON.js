@@ -19,6 +19,18 @@ const AlgoEncryptDecryptJSON = () => {
         setSnackBarOpen(false);
     };
 
+    const handleFileChange = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const fileContent = e.target.result;
+                setText(fileContent);
+            };
+            reader.readAsText(file);
+        }
+    };
+
     const encryptJSON = () => {
         try {
             const encryptedText = btoa(text);
@@ -42,15 +54,16 @@ const AlgoEncryptDecryptJSON = () => {
     };
 
     const copyToClipboard = (text) => {
-        navigator.clipboard.writeText(text).then(() => {
-            setVerif(true)
-            setSnackBarOpen(true);
-            setAlertMessage("Texte copié dans le press-papier")
-        }).catch((error) => {
-            setVerif(true)
-            setSnackBarOpen(true);
-            setAlertMessage("Une erreur est survenue " + error + "!")
-        });
+        const el = document.createElement('textarea');
+        el.value = text;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+
+        setAlertMessage("Copié dans le presse-papier.");
+        setVerif(true);
+        setSnackBarOpen(true);
     };
 
     return (
@@ -73,6 +86,7 @@ const AlgoEncryptDecryptJSON = () => {
                     <Typography sx={{ marginY: 1, borderBottom: "1px solid black", width: "100%", textAlign: "center" }}>
                         JSON:
                     </Typography>
+                    <input type="file" accept=".json" onChange={handleFileChange} />
                     <TextField
                         multiline
                         fullWidth
@@ -127,7 +141,6 @@ const AlgoEncryptDecryptJSON = () => {
                         value={decryptJsonvalue}
                     />
                 </Grid>
-
                 <CustomSnackBar
                     open={snackBarOpen}
                     message={alertMessage}
