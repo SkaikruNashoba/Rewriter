@@ -112,13 +112,12 @@ const AlgoRewriter = () => {
         image.src = imageUrl;
         image.onload = () => {
             const preprocessedImageUrl = preprocessImage(image);
-            // console.log("preprocessedImageUrl ===>", preprocessedImageUrl)
             Tesseract.recognize(preprocessedImageUrl)
                 .then(({data: {text}}) => {
-                    console.log("text ===> ", text)
+                    console.log(text)
                     const filteredText = filterText(text);
                     setExtractedText(filteredText);
-                    console.log("filteredText ===> ", filteredText)
+                    console.log(filteredText)
                 });
         };
     };

@@ -120,7 +120,7 @@ const AdresseWithId = () => {
                                     transition: "0.2s"
                                 }
                             }}>
-                                <Link to="/Profil" className="noDeco color-bk">
+                                <Link to="/Profil" style={{textDecoration: "none", color: "black"}}>
                                     Retour
                                 </Link>
                             </Button>

@@ -19,30 +19,10 @@ const AlgoConversion = () => {
     };
 
     const regexScss = [
-        //récupère toutes les couleurs sans tiret et avec un #
-        /--([a-zA-Z0-9]+): (#[a-zA-Z0-9]+);/gm,
-
-        //récupère toutes les couleurs sans tiret et avec rgba avec opacité à virgule
-        /--([a-zA-Z0-9]+): (rgba\([0-9], [0-9], [0-9], [0-9].[0-9]\));/gm,
-
-        //récupère toutes les couleurs sans tiret et avec rgba avec opacité sans virgule
-        /--([a-zA-Z0-9]+): (rgba\([0-9], [0-9], [0-9], [0-9]\));/gm,
-
-        //récupère toutes les couleurs sans tiret et avec rgb
-        /--([a-zA-Z0-9]+): (rgb\([0-9], [0-9], [0-9]\));/gm,
-
-
-        //récupère toutes les couleurs avec tiret et avec un #
-        /--([a-zA-Z0-9]+-[a-zA-Z0-9]+): (#[a-zA-Z0-9]+);/gm,
-
-        //récupère toutes les couleurs avec un tiret et avec rgba
-        /--([a-zA-Z0-9]+-[a-zA-Z0-9]+): (rgba\([0-9], [0-9], [0-9], [0-9].[0-9]\));/gm,
-
-        //récupère toutes les couleurs avec tiret et avec rgba avec opacité sans virgule
-        /--([a-zA-Z0-9]+-[a-zA-Z0-9]+): (rgba\([0-9], [0-9], [0-9], [0-9]\));/gm,
-
-        //récupère toutes les couleurs avec un tiret et avec rgb
-        /--([a-zA-Z0-9]+-[a-zA-Z0-9]+): (rgb\([0-9], [0-9], [0-9]\));/gm
+        /--(\w+(?:-\w+)?): (#\w+);/gm,
+        /--(\w+(?:-\w+)?): (rgba\(\d{1,3}, \d{1,3}, \d{1,3}, \d.\d+\));/gm,
+        /--(\w+(?:-\w+)?): (rgba\(\d{1,3}, \d{1,3}, \d{1,3}, \d+\));/gm,
+        /--(\w+(?:-\w+)?): (rgb\(\d{1,3}, \d{1,3}, \d{1,3}\));/gm
     ];
 
     const convertToTailwindAndJSON = () => {

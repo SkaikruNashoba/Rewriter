@@ -21,9 +21,6 @@ function App() {
                 <Route path="/Register/" element={<Register/>}/>
                 <Route path="/Login/" element={<Login/>}/>
                 <Route path="/Profil/" element={<Profil/>}/>
-                {/*<Route path="/Login/Admin/" element={<LoginAdmin/>}/>*/}
-                {/*<Route path="/Panel/Admin" element={<PanelAdmin/>}/>*/}
-                {/*<Route path="/Panier/" element={<Panier/>}/>*/}
             </Routes>
             <Footer/>
         </GlobalProvider>

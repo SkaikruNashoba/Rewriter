@@ -6,7 +6,7 @@ import DisconnectPic from "../../Assets/header_img/logout.png";
 import InscriptionPic from "../../Assets/header_img/inscription.png";
 import ConnectPic from "../../Assets/header_img/user_connect.png";
 import {
-    AppBar, Avatar, Box, Grid, Toolbar, Typography,
+    AppBar, Avatar, Box, Grid, Toolbar,
 } from "@mui/material";
 import Icon from '../../Assets/icon.png';
 import {GlobalContext} from "../../Hooks/GlobalContext";
@@ -44,7 +44,7 @@ const Header = () => {
     };
 
     return (<>
-        <AppBar position="relative" sx={{backgroundColor: "white", color: "black", height: 100, display: "grid", marginBottom: 2}}>
+        <AppBar position="relative" sx={{backgroundColor: "white", color: "black", display: "grid", marginBottom: 2}}>
             <Toolbar sx={{paddingLeft: "0px", paddingRight: "0px"}}>
                 <Grid container>
                     <Grid item md={6} sm={3}
