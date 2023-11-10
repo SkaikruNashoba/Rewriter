@@ -9,6 +9,7 @@ import Login from "./Views/User/Login";
 import Register from "./Views/User/Register";
 import Profil from "./Views/User/Profil";
 import AdresseWithId from "./Views/User/Profil/AdresseWithId";
+import Wish from "./Views/Wishes/Wish";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/Register/" element={<Register/>}/>
                 <Route path="/Login/" element={<Login/>}/>
                 <Route path="/Profil/" element={<Profil/>}/>
+                <Route path="/Wish/" element={<Wish/>}/>
             </Routes>
             <Footer/>
         </GlobalProvider>
