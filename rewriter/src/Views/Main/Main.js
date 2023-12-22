@@ -3,6 +3,7 @@ import { Box, Grid, Tab } from '@mui/material';
 import TabContext from '@mui/lab/TabContext';
 import { TabList, TabPanel } from "@mui/lab";
 import AlgoRewriter from "../ListAlgo/AlgoRewriter";
+import AlgoCheck from '../ListAlgo/AlgoCheck';
 // import AlgoConversion from "../ListAlgo/AlgoConversion";
 // import AlgoEncryptDecryptJSON from "../ListAlgo/AlgoEncryptDecryptJSON";
 
@@ -19,9 +20,10 @@ const Main = () => {
 					<TabContext value={value}>
 						<Box sx={{ borderBottom: "1px solid", borderColor: "divider" }}>
 							<TabList onChange={handleChange}>
-								<Tab label="Algorithme de réécriture d'image" value="1" />
-								{/* <Tab label="Algorithme de conversion de scss" value="2"/>
-                                <Tab label="Algorithme de cryptage/decryptage de json" value="3"/> */}
+								<Tab label="Réécriture d'image" value="1" />
+								{/* <Tab label="Conversion de scss" value="2"/>
+                                <Tab label="Cryptage/decryptage de json" value="3"/> */}
+								<Tab label="Comparaison de texte" value="4" />
 							</TabList>
 						</Box>
 						<TabPanel value="1">
@@ -33,6 +35,9 @@ const Main = () => {
                         <TabPanel value="3">
                             <AlgoEncryptDecryptJSON />
                         </TabPanel> */}
+						<TabPanel value="4">
+							<AlgoCheck />
+						</TabPanel>
 					</TabContext>
 				</Box>
 			</Grid>

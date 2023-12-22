@@ -12,6 +12,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "diff": "^5.1.0",
     "face-api.js": "^0.22.2",
     "franc-min": "^6.1.0",
     "particles.js": "^2.0.0",
