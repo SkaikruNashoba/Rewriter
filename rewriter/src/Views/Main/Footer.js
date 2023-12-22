@@ -21,7 +21,7 @@ const Footer = () => {
 					version 1.0.0
 				</span>
 				<span style={{ paddingRight: 20 }}>
-					<a href="https://github.com/SkaikruNashoba" target="_blank">Skaikru Nashoba</a> - Tous droits réservés - 2023
+					<a href="https://github.com/SkaikruNashoba" target="_blank" rel="noreferrer">Skaikru Nashoba</a> - Tous droits réservés - 2023
 				</span>
 			</div>
 		</>
