@@ -40,13 +40,13 @@ const AlgoCheck = () => {
 				<Grid container sx={{ marginY: 3 }}>
 					<Grid item xs={12} sm={12} md={12} lg={6} xl={6} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
 						<Box sx={{ display: "flex", flexDirection: "column" }}>
-							<Typography variant="h3" sx={{ textAlign: "center" }}>Texte 1</Typography>
+							<Typography variant="h5" sx={{ textAlign: "center" }}>Texte original</Typography>
 							<textarea style={{ width: '500px', height: '200px' }} value={text1} onChange={handleChange1} />
 						</Box>
 					</Grid>
 					<Grid item xs={12} sm={12} md={12} lg={6} xl={6} sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
 						<Box sx={{ display: "flex", flexDirection: "column" }}>
-							<Typography variant="h3" sx={{ textAlign: "center" }}>Texte 2</Typography>
+							<Typography variant="h5" sx={{ textAlign: "center" }}>Texte à comparer</Typography>
 							<textarea style={{ width: '500px', height: '200px' }} value={text2} onChange={handleChange2} />
 						</Box>
 					</Grid>
