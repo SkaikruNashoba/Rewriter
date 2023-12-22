@@ -1,5 +1,5 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import React from 'react';
 import { diffChars } from 'diff';
 
@@ -32,6 +32,7 @@ const AlgoCheck = () => {
 		}
 	};
 
+
 	return (
 		<>
 			<Container maxWidth="lg" sx={{ display: "flex", alignItems: "center", flexDirection: "column", marginBottom: 4 }}>
@@ -53,8 +54,9 @@ const AlgoCheck = () => {
 			</Container>
 			<Container maxWidth="md">
 				<Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-					<Typography variant="h5" sx={{ marginY: 1 }}>Résultat: <b style={{ color: result === "Les textes sont identiques" ? "green" : "red" }}>{result}</b></Typography>
-
+					{result && (text1 !== "" && text2 !== "") && (
+						<Typography variant="h5" sx={{ marginY: 1 }}>Résultat: <b style={{ color: result === "Les textes sont identiques" ? "green" : "red" }}>{result}</b></Typography>
+					)}
 					{differences.length > 0 && (
 						<>
 							<Typography variant="h5">Différences</Typography>
