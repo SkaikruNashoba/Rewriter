@@ -32,8 +32,19 @@ const AlgoRewriter = () => {
 			.catch((error) => console.error(error));
 	};
 
+	const copyTextToClipboard = (text) => {
+		const textarea = document.createElement('textarea');
+		textarea.value = text;
+		document.body.appendChild(textarea);
+		textarea.select();
+		textarea.setSelectionRange(0, textarea.value.length);
+		document.execCommand('copy');
+		document.body.removeChild(textarea);
+		console.log('Texte copié dans le presse-papiers :', text);
+	};
+
 	const handleCopyText = () => {
-		navigator.clipboard.writeText(extractedText);
+		copyTextToClipboard(extractedText);
 	};
 
 	return (
