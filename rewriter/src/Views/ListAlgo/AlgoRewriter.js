@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Tesseract from 'tesseract.js';
-import { Box, Divider, Grid, Typography } from "@mui/material";
+import { Box, Divider, Grid, Typography, Button } from "@mui/material";
 
 const AlgoRewriter = () => {
 	const [imageURL, setImageURL] = useState('');
@@ -32,6 +32,10 @@ const AlgoRewriter = () => {
 			.catch((error) => console.error(error));
 	};
 
+	const handleCopyText = () => {
+		navigator.clipboard.writeText(extractedText);
+	};
+
 	return (
 		<>
 			<div>
@@ -51,9 +55,14 @@ const AlgoRewriter = () => {
 					<Grid item xs={12} sm={12} md={12} lg={6} xl={7}>
 						{extractedText && (
 							<Box sx={{ marginY: 2, width: "100%" }}>
-								<Typography variant={'h5'}>Texte extrait :</Typography>
+								<Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+									<Typography variant={'h5'}>Texte extrait :</Typography>
+									<Button onClick={handleCopyText} variant="contained" color="primary">
+										Copier le texte
+									</Button>
+								</Box>
 								<Divider sx={{ marginY: 2 }} />
-								<pre style={{ overflowX: 'auto', maxWidth: '100%' }}>{extractedText}</pre>
+								<Typography sx={{ overflowX: 'auto', maxWidth: '100%' }}>{extractedText}</Typography>
 							</Box>
 						)}
 					</Grid>
